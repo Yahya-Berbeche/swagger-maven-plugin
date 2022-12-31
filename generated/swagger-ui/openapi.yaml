@@ -1,0 +1,60 @@
+---
+swagger: "2.0"
+info:
+  description: "Bazaarvoice client API used for POC market to improve ratings and\
+    \ reviews\n                                    capture for Nespresso products\
+    \ a new R and R provider."
+  version: "1.0.0"
+  title: "NCS-RATING Bazaar API v1.0.0"
+  contact:
+    name: "Menara Team"
+    url: "https://dsu-confluence.nestle.biz/display/SFSR/%5BNCS-Rating%5D+-+Bazaarvoice+integration"
+    email: "khalid.faleh@es.nestle.com"
+basePath: "/"
+schemes:
+- "https"
+paths:
+  /data/reviews.json:
+    get:
+      summary: "ReviewsApi"
+      description: ""
+      operationId: "getReviews"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "api_version"
+        in: "query"
+        required: false
+        type: "string"
+      - name: "Feedback"
+        in: "query"
+        required: false
+        type: "string"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/SearchReviews"
+definitions:
+  Review:
+    type: "object"
+    properties:
+      reviewId:
+        type: "string"
+      title:
+        type: "string"
+      reviewText:
+        type: "string"
+      rating:
+        type: "integer"
+        format: "int32"
+  SearchReviews:
+    type: "object"
+    properties:
+      updateDate:
+        type: "string"
+        format: "date-time"
+      reviews:
+        type: "object"
+        additionalProperties:
+          $ref: "#/definitions/Review"

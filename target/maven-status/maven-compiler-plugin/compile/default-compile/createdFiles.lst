@@ -1,0 +1,9 @@
+com\ecom\ber\api\models\Review.class
+com\ecom\ber\api\models\SearchReviews.class
+com\ecom\ber\api\models\Feedback.class
+com\ecom\ber\api\models\Feedback$FeedbackBuilder.class
+com\ecom\ber\api\models\Review$ReviewBuilder.class
+com\ecom\ber\api\models\SubmitReview.class
+com\ecom\ber\api\ReviewsApi.class
+com\ecom\ber\api\models\SubmitReview$SubmitReviewBuilder.class
+com\ecom\ber\api\models\SearchReviews$SearchReviewsBuilder.class
