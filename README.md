@@ -29,7 +29,7 @@ Add to your maven project pom.xml file these dependencies :
 </dependencies>
 ```
 
-Add to your build->plugins section : 
+Add to your build->plugins section :
 ```xml
 <build>
         <plugins>
@@ -80,7 +80,7 @@ Add to your build->plugins section :
         </plugins>
     </build>
 ```
-N.B : 
+N.B :
 In order to generate the Swagger file you should add this informations to the build :
 
 - groupId : *<groupId>com.github.kongchen</groupId>* <br />
